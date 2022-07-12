@@ -1,0 +1,78 @@
+/* 清除浮动是为了防止父盒子高度为0，现在给了父盒子高度所以不用清除 */
+.main {
+    width: 983px;
+    height: 455px;
+    margin-left: 219px;
+    margin-top: 10px;
+}
+.focus {
+    float: left;
+    width: 720px;
+    height: 455px;
+}
+.newsflash{
+    float: right;
+    width: 250px;
+    height: 455px;
+}
+.news {
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+.news-hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+    padding: 0 15px;
+}
+.news-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+.news-hd .more {
+    float: right;
+}
+.news-hd .more::after {
+    font-family: 'icomoon';
+    content: '\e920';
+}
+.news-bd {
+    padding: 5px 15px 0;
+}
+.news-bd ul li {
+    height: 24px;
+    line-height: 24px;
+    /* 文字超出部分隐藏三部曲 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.lifeservice {
+    overflow: hidden;
+    height: 209px;
+    border: 1px solid #ccc;
+    /* 解决上方重叠的问题 */
+    border-top: 0;
+}
+.lifeservice ul {
+    /* 如果宽度为250px会导致li只能放3个而不能放四个，所以width改
+    为252不会造成下移 */
+    width: 252px;
+    /* 这里超出的2px会导致li的超出一点所以上面用overflow切掉 */
+}
+.lifeservice ul li {
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.bargain {
+    height: 75px;
+    margin-top: 7px;
+}
+/* 
+    轮播图要ul后面加li的结构这样才是规范的写法，需要定期更换的
+    图片最好放在upload文件夹中
+*/
+
